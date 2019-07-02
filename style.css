@@ -2,15 +2,19 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* border: solid red 1px; */
+ /* border: solid red 1px; */
 }
 
 body {
 font-size: 18px;
 color: #232323;
+width: auto;
+font-weight: 400;
 
 
 }
+
+
 
 
 .odd {
@@ -27,8 +31,10 @@ background-attachment: fixed;
 
 .hero {
   height: 500px;
-  background-image: url("animal-collar-dog.jpg")
-
+  background-image: url("doghero.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 
@@ -36,13 +42,16 @@ h2 {
   font-family: 'Roboto Slab', serif;
   font-size: 1.5em;
   color: #81007f;
-  padding-bottom: 30px;
+  padding-bottom: 35px;
+  font-weight: 700;
 }
 
 h3 {
 
   font-family: 'Roboto Slab', serif;
   font-size: 1.17em;
+  font-weight: bold;
+  font-weight: 700;
 
 }
 
@@ -53,18 +62,19 @@ font-family: 'Roboto Slab', serif;
 p {
   font-family: 'Roboto', sans-serif;
   font-size: 1em;
-  padding-bottom: 30px;
+  padding-bottom: 35px;
 
 }
 
 span {
-  color: #EDDAEC;
+  color: #F9E7F9;
 }
 
 header {
-  position: sticky;
+  position: fixed;
   top: 0px;
   background-color: #fafafa;
+  width: 100%;
 }
 
 
@@ -103,15 +113,18 @@ nav li:hover{
 
 
 nav img {
-  height: 63px;
+  height: 94px;
   display: flex;
   justify-content: flex-end;
 
+
 }
 
-.hero img {
-  height: 350px;
+nav img:hover{
+  background-color: #f5f5f5;
 }
+
+
 
 .hero h2 {
   color: white;
@@ -121,7 +134,7 @@ nav img {
 
 nav li {
   flex-grow: 1;
-  padding: 34px 0px 34px 0px;
+  padding: 34px 0px 35px 0px;
 }
 
 .logo {
@@ -130,6 +143,9 @@ nav li {
   justify-content: flex-start;
 
 }
+
+
+
 
 
 
@@ -195,12 +211,7 @@ padding: 100px 0px 100px 0px;
                          color 0.2s ease-out;!important;
 }
 
-.hero_logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 665px;
-}
+
 
 
 
@@ -208,20 +219,34 @@ padding: 100px 0px 100px 0px;
 .main_container {
   width: 1330px;
   margin: 0px auto;
-  padding: 60px 0px 60px 0px;
+  padding: 35px 0px 35px 0px;
+
 
 }
 
+.target {
+  padding-top: 94px;
+   margin-top: -94px;
+   display: inline-block;
+
+
+}
+
+
+
 .main_content {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow: hidden;
 
 }
 
 
 
 .main_text {
-  width: 65%;
   display: flex;
+  flex: 1 2 450px;
   flex-direction: column;
 
 
@@ -229,16 +254,16 @@ padding: 100px 0px 100px 0px;
 }
 
 
-
 .main_image{
-  width: 35%;
   display: flex;
-  justify-content: flex-end;
+  padding-left: 50px;
 }
 
 .main_image img{
   height: 220px;
   border-radius: 10px;
+
+
 }
 
 footer {
@@ -259,3 +284,72 @@ footer p {
 {text-align:right;height:500px;width:100%; }
 
 .gmap_canvas {overflow:hidden;background:none!important;height:500px;width:100%; border-radius:  10px;}
+
+@media screen and (max-width: 1400px) {
+  .main_container {
+    width: 100%;
+
+  }
+
+  .main_container {
+    width: 90%;
+    margin: 0px auto;
+
+}
+
+.nav_container{
+
+  width: 90%;
+  margin: 0px auto;
+
+}
+
+
+
+
+}
+
+@media screen and (max-width: 992px) {
+
+
+    .main_image{
+
+      padding-left: 0px;
+
+    }
+
+.nav_container{
+  font-size: 0.9em;
+
+    flex-wrap: wrap;
+  }
+
+
+}
+
+@media screen and (max-width: 576px) {
+
+    .hero_container   {
+      width: 80%;
+      margin: 0px auto;
+      padding: 40px 0px 40px 0px;
+    }
+
+    .nav_container{
+      font-size: 0.7em;
+      flex-flow: row wrap;
+
+
+      }
+
+      nav li {
+        flex-grow: 1;
+        padding: 10px 10px 10px 10px;
+      }
+
+      nav img {
+        height: 32px;
+
+      }
+
+  }
